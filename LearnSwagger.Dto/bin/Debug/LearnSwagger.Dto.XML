@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LearnSwagger.Dto</name>
+    </assembly>
+    <members>
+        <member name="T:LearnSwagger.Dto.TestAddInput">
+            <summary>
+            Dto中的TestAddInput
+            </summary>
+        </member>
+        <member name="P:LearnSwagger.Dto.TestAddInput.TestName">
+            <summary>
+            测试Dto添加
+            </summary>
+        </member>
+    </members>
+</doc>

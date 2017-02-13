@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LearnSwagger.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:LearnSwagger.WebApi.SwaggerConfig.GetXmlCommentsPath">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:LearnSwagger.WebApi.Controllers.TestController">
+            <summary>
+            测试资源
+            </summary>
+        </member>
+        <member name="M:LearnSwagger.WebApi.Controllers.TestController.Get(System.String)">
+            <summary>
+            1
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LearnSwagger.WebApi.Controllers.TestController.Post(LearnSwagger.WebApi.Models.TestInput)">
+            <summary>
+            3
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LearnSwagger.WebApi.Controllers.TestController.Post(LearnSwagger.Dto.TestAddInput)">
+            <summary>
+            4
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LearnSwagger.WebApi.Filters.ApiValidFilterAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:LearnSwagger.WebApi.Filters.ApiValidFilterAttribute.OnActionExecuting(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            
+            </summary>
+            <param name="actionContext"></param>
+        </member>
+        <member name="P:LearnSwagger.WebApi.Models.TestInput.Name">
+            <summary>
+            Name属性
+            </summary>
+        </member>
+        <member name="P:LearnSwagger.WebApi.Models.TestInput.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+    </members>
+</doc>

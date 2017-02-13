@@ -1,0 +1,5 @@
+D:\Code\LearnSwagger\LearnSwagger.Dto\bin\Debug\LearnSwagger.Dto.dll
+D:\Code\LearnSwagger\LearnSwagger.Dto\bin\Debug\LearnSwagger.Dto.pdb
+D:\Code\LearnSwagger\LearnSwagger.Dto\obj\Debug\LearnSwagger.Dto.dll
+D:\Code\LearnSwagger\LearnSwagger.Dto\obj\Debug\LearnSwagger.Dto.pdb
+D:\Code\LearnSwagger\LearnSwagger.Dto\bin\Debug\LearnSwagger.Dto.XML

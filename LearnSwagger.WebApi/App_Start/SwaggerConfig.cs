@@ -1,3 +1,6 @@
+using System;
+using System.IO;
+using System.Linq;
 using System.Web.Http;
 using WebActivatorEx;
 using LearnSwagger.WebApi;
@@ -13,7 +16,7 @@ namespace LearnSwagger.WebApi
         {
             var thisAssembly = typeof(SwaggerConfig).Assembly;
 
-            GlobalConfiguration.Configuration 
+            GlobalConfiguration.Configuration
                 .EnableSwagger(c =>
                     {
                         // By default, the service root url is inferred from the request used to access the docs.
@@ -57,7 +60,7 @@ namespace LearnSwagger.WebApi
                         //c.BasicAuth("basic")
                         //    .Description("Basic HTTP Authentication");
                         //
-						// NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
+                        // NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
                         //c.ApiKey("apiKey")
                         //    .Description("API Key Authentication")
                         //    .Name("apiKey")
@@ -97,7 +100,8 @@ namespace LearnSwagger.WebApi
                         // those comments into the generated docs and UI. You can enable this by providing the path to one or
                         // more Xml comment files.
                         //
-                        //c.IncludeXmlComments(GetXmlCommentsPath());
+                        c.IncludeXmlComments(GetXmlCommentsPath());
+                        c.IncludeXmlComments($"{AppDomain.CurrentDomain.BaseDirectory}\\bin\\LearnSwagger.Dto.XML");
 
                         // Swashbuckle makes a best attempt at generating Swagger compliant JSON schemas for the various types
                         // exposed in your API. However, there may be occasions when more control of the output is needed.
@@ -173,7 +177,7 @@ namespace LearnSwagger.WebApi
                         //
                         //c.CustomProvider((defaultProvider) => new CachingSwaggerProvider(defaultProvider));
                     })
-                .EnableSwaggerUi(c =>
+                .EnableSwaggerUi( c =>
                     {
                         // Use the "InjectStylesheet" option to enrich the UI with one or more additional CSS stylesheets.
                         // The file must be included in your project as an "Embedded Resource", and then the resource's
@@ -241,6 +245,16 @@ namespace LearnSwagger.WebApi
                         //
                         //c.EnableApiKeySupport("apiKey", "header");
                     });
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public static string GetXmlCommentsPath()
+        {//bin\LearnSwagger.Dto.XML
+            string serverPath = AppDomain.CurrentDomain.BaseDirectory;
+            return Path.Combine(serverPath, "bin\\LearnSwagger.WebApi.XML");
         }
     }
 }

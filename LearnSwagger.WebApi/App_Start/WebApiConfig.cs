@@ -16,7 +16,7 @@ namespace LearnSwagger.WebApi
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
+                routeTemplate: "api/source{source}/v{version}/{controller}",
                 defaults: new { id = RouteParameter.Optional }
             );
         }
